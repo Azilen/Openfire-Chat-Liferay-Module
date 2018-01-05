@@ -1,0 +1,6 @@
+Bundle-SymbolicName: chat.web
+Bundle-Version: 1.0.0
+Include-Resource:\
+    @httpclient-4.2.5.jar,\
+    @httpcore-4.2.4.jar,\
+	@rest-api-client*.jar
