@@ -59,7 +59,7 @@ public class ChatWebModulePortlet extends MVCPortlet {
 		ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
 
 		/* Get Stored password from cache for loggedin user */
-		PortalCache portalCache = MultiVMPoolUtil.getCache(User.class.getName());
+		PortalCache<String, String> portalCache = MultiVMPoolUtil.getPortalCache(User.class.getName());
 		String xmpp_token = (String) portalCache.get(themeDisplay.getUser().getEmailAddress());
 
 		/* XMPP(Open fire) server properties */
