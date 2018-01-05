@@ -1,1 +1,1 @@
-http://admin@192.168.3.5:7990/scm/lmcp/chartportlet.git
+
