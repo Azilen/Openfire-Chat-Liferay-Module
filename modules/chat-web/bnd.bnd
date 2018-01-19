@@ -4,3 +4,27 @@ Include-Resource:\
     @httpclient-4.2.5.jar,\
     @httpcore-4.2.4.jar,\
 	@rest-api-client*.jar
+	
+Bundle-ClassPath: \
+	.,\
+	META-INF/lib/aopalliance-repackaged-2.4.0-b31.jar,\
+	META-INF/lib/hk2-api-2.4.0-b31.jar,\
+	META-INF/lib/hk2-locator-2.4.0-b31.jar,\
+	META-INF/lib/hk2-utils-2.4.0-b31.jar,\
+	META-INF/lib/jackson-annotations-2.1.4.jar,\
+	META-INF/lib/jackson-core-2.1.4.jar,\
+	META-INF/lib/jackson-databind-2.1.4.jar,\
+	META-INF/lib/javassist-3.18.1-GA.jar,\
+	META-INF/lib/javax.annotation-api-1.2.jar,\
+	META-INF/lib/javax.inject-2.4.0-b31.jar,\
+	META-INF/lib/javax.ws.rs-api-2.0.1.jar,\
+	META-INF/lib/jersey-client-2.22.1.jar,\
+	META-INF/lib/jersey-common-2.22.1.jar,\
+	META-INF/lib/jersey-guava-2.22.1.jar,\
+	META-INF/lib/jersey-media-jaxb-2.22.1.jar,\
+	META-INF/lib/osgi-resource-locator-1.0.1.jar,\
+	META-INF/lib/slf4j-api-1.7.12.jar,\
+	META-INF/lib/slf4j-simple-1.7.12.jar
+Import-Package: !com.sun.jdi.*,\
+				!jersey.repackaged.com.google.common.*,\
+				*

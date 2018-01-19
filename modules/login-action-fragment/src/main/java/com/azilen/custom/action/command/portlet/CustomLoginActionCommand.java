@@ -24,9 +24,12 @@ import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.portlet.bridges.mvc.BaseMVCActionCommand;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCActionCommand;
 import com.liferay.portal.kernel.util.ParamUtil;
+import com.liferay.portal.kernel.util.PortalUtil;
 
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -59,9 +62,8 @@ public class CustomLoginActionCommand extends BaseMVCActionCommand {
 		String password = ParamUtil.getString(actionRequest, "password");
 
 		PortalCache portalCache = MultiVMPoolUtil.getCache(User.class.getName());
-		
-		// Sets cache timeout for 8 hours
-		portalCache.put(emailAdddress, password, 1000 * 60 * 60 * 8);
+		// 3600000 * 8 :  8 hours timeout for cache
+		portalCache.put(emailAdddress, password, 3600000 * 8);
 		
 		mvcActionCommand.processAction(actionRequest, actionResponse);
 	}
